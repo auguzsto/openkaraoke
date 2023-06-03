@@ -15,6 +15,12 @@ ThemeData get themeDefault => ThemeData(
         surface: Colors.white,
         onSurface: Colors.white,
       ),
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          size: 42,
+        ),
+      ),
       snackBarTheme: const SnackBarThemeData(
         contentTextStyle: TextStyle(color: Colors.black),
       ),

@@ -7,9 +7,11 @@ import 'package:openkaraoke/src/view/points/points_view.dart';
 
 class PlayerView extends StatefulWidget {
   final String? musicId;
+  final String? path;
   const PlayerView({
     super.key,
     this.musicId,
+    this.path,
   });
 
   @override
@@ -50,7 +52,10 @@ class _PlayerViewState extends State<PlayerView> {
             }
 
             return Video(
-              player: musicController.getById(musicModel),
+              player: musicController.getById(
+                musicModel,
+                widget.path!,
+              ),
               showControls: false,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
