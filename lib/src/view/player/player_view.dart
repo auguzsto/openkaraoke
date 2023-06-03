@@ -22,8 +22,6 @@ class _PlayerViewState extends State<PlayerView> {
     final musicModel = MusicModel(id: widget.musicId);
     final musicController = MusicController();
 
-    musicController.addListener(() => print('Escutei'));
-
     return Scaffold(
       body: KeyboardListener(
         focusNode: FocusNode(),
