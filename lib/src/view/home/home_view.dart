@@ -15,7 +15,6 @@ class HomeView extends StatefulWidget {
 
 final controller = TextEditingController();
 final config = Config();
-final keyInputCod = GlobalKey();
 
 class _HomeViewState extends State<HomeView> {
   @override
@@ -80,7 +79,6 @@ class _HomeViewState extends State<HomeView> {
             mainAxisSize: MainAxisSize.min,
             children: [
               TextFormField(
-                key: keyInputCod,
                 controller: controller,
                 autofocus: true,
                 style: const TextStyle(fontSize: 32),

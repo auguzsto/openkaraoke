@@ -12,10 +12,10 @@ abstract class IMusic {
 class MusicController extends ChangeNotifier implements IMusic {
   ValueNotifier<bool> isCompleted = ValueNotifier<bool>(false);
   final config = Config();
+  final player = Player(id: 69420);
 
   @override
   Player getById(MusicModel music, String path) {
-    final player = Player(id: 69420);
     final file = Media.file(File("$path${music.id}.mp4"));
     player.open(file);
 

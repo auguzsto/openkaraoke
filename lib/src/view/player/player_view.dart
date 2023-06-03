@@ -33,7 +33,7 @@ class _PlayerViewState extends State<PlayerView> {
           if (value.logicalKey.keyLabel != "Escape") {
             return;
           }
-          Player(id: 69420).dispose();
+          musicController.player.dispose();
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
