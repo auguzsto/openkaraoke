@@ -53,7 +53,7 @@ class _PlayerViewState extends State<PlayerView> {
 
             return Video(
               player: musicController.getById(musicModel),
-              showControls: true,
+              showControls: false,
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               scale: 1.0,
