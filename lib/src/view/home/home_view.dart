@@ -18,12 +18,6 @@ final config = Config();
 
 class _HomeViewState extends State<HomeView> {
   @override
-  void initState() {
-    config.db.collection('config').stream.listen((event) => setState(() {}));
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       //Config

@@ -4,9 +4,11 @@ import 'package:openkaraoke/src/app_widget.dart';
 import 'package:openkaraoke/src/constants/labels.dart';
 import 'package:openkaraoke/src/view/home/home_view.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  config.set(Labels.pathDefault);
+  await config
+      .getByCollection('config')
+      .then((value) => value!.isEmpty ? config.set(Labels.pathDefault) : null);
   DartVLC.initialize();
   runApp(const AppWidget());
 }
