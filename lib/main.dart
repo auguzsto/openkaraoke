@@ -6,9 +6,9 @@ import 'package:openkaraoke/src/view/home/home_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await config
-      .getByCollection('config')
-      .then((value) => value!.isEmpty ? config.set(Labels.pathDefault) : null);
+
+  await config.getByCollection('config').then((value) =>
+      value?.isEmpty ?? value == null ? config.set(Labels.pathDefault) : null);
   DartVLC.initialize();
   runApp(const AppWidget());
 }
